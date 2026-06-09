@@ -1,0 +1,15 @@
+aws_region  = "ap-northeast-2"
+aws_profile = "capstone"
+
+cluster_name = "ssd-dev-eks"
+vpc_id       = "vpc-0387e9a2c02f1d5e9"
+
+private_subnet_ids = [
+  "subnet-private-a",
+  "subnet-private-c"
+]
+
+public_subnet_ids = [
+  "subnet-public-a",
+  "subnet-public-c"
+]
