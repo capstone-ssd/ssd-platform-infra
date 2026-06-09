@@ -16,6 +16,10 @@ module "eks" {
   vpc_id                   = data.aws_vpc.existing.id
   subnet_ids               = var.cluster_subnet_ids
   control_plane_subnet_ids = var.cluster_subnet_ids
+  cluster_enabled_log_types = []
+  cluster_encryption_config = {}
+  create_kms_key            = false
+  create_cloudwatch_log_group = false
 
   cluster_endpoint_public_access  = true
   cluster_endpoint_private_access = true

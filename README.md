@@ -31,6 +31,12 @@ SSD MSA 환경의 AWS 인프라를 Terraform으로 관리하는 저장소다.
 
 현재 조회 기준으로 VPC 안에 private subnet이 확인되지 않았기 때문에, 1차 검증 환경은 public subnet 기반의 단순 EKS 구성을 전제로 한다.
 
+## 검증용 단순화 정책
+
+- EKS control plane 로그는 비활성화한다.
+- 클러스터 secret encryption용 별도 KMS 키는 생성하지 않는다.
+- 우선 EKS, 노드 그룹, ECR, Secrets Manager 생성에 집중한다.
+
 ## 구조
 
 - `environments/dev`
