@@ -14,8 +14,8 @@ module "eks" {
   cluster_version = "1.33"
 
   vpc_id                   = data.aws_vpc.existing.id
-  subnet_ids               = var.private_subnet_ids
-  control_plane_subnet_ids = var.private_subnet_ids
+  subnet_ids               = var.cluster_subnet_ids
+  control_plane_subnet_ids = var.cluster_subnet_ids
 
   cluster_endpoint_public_access  = true
   cluster_endpoint_private_access = true
@@ -29,7 +29,7 @@ module "eks" {
       desired_size   = var.desired_size
       min_size       = var.min_size
       max_size       = var.max_size
-      subnet_ids     = var.private_subnet_ids
+      subnet_ids     = var.cluster_subnet_ids
       capacity_type  = "ON_DEMAND"
     }
   }

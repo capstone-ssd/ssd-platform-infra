@@ -23,6 +23,14 @@ SSD MSA 환경의 AWS 인프라를 Terraform으로 관리하는 저장소다.
 - 기존 서브넷
 - 기존 PostgreSQL RDS
 
+## 현재 확인된 dev 네트워크
+
+- VPC: `vpc-0387e9a2c02f1d5e9`
+- Public subnet A: `subnet-0a8356d7c185d372b`
+- Public subnet C: `subnet-0b1dfd6e1ed3e43ff`
+
+현재 조회 기준으로 VPC 안에 private subnet이 확인되지 않았기 때문에, 1차 검증 환경은 public subnet 기반의 단순 EKS 구성을 전제로 한다.
+
 ## 구조
 
 - `environments/dev`

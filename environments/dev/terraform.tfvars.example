@@ -4,12 +4,7 @@ aws_profile = "capstone"
 cluster_name = "ssd-dev-eks"
 vpc_id       = "vpc-0387e9a2c02f1d5e9"
 
-private_subnet_ids = [
-  "subnet-private-a",
-  "subnet-private-c"
-]
-
-public_subnet_ids = [
-  "subnet-public-a",
-  "subnet-public-c"
+cluster_subnet_ids = [
+  "subnet-0a8356d7c185d372b",
+  "subnet-0b1dfd6e1ed3e43ff"
 ]

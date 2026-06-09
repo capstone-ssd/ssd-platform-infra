@@ -21,13 +21,8 @@ variable "vpc_id" {
   type        = string
 }
 
-variable "private_subnet_ids" {
-  description = "EKS 노드가 올라갈 private subnet 목록"
-  type        = list(string)
-}
-
-variable "public_subnet_ids" {
-  description = "ALB 및 public resource가 사용할 public subnet 목록"
+variable "cluster_subnet_ids" {
+  description = "EKS control plane과 node group이 사용할 subnet 목록"
   type        = list(string)
 }
 
